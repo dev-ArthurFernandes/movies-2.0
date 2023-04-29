@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import updateMovieInfoService from "../services/updateMovieInfo.service";
+import { updateMovieInfoService } from "../services";
 
 
 const updateMovieInfoController = async (req: Request, res: Response): Promise<Response> => {

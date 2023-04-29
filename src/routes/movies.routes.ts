@@ -1,6 +1,7 @@
 import { Router } from "express";
 import {
     createNewMovieController,
+    deleteMovieController,
     listAllMoviesController,
     updateMovieInfoController
 } from "../controllers";
@@ -20,4 +21,5 @@ moviesRoutes.get('', listAllMoviesController)
 
 moviesRoutes.patch('/:id', ensureData(updateMoviesSchemas), validateName, validateId, updateMovieInfoController)
 
+moviesRoutes.delete('/:id', validateId, deleteMovieController)
 export default moviesRoutes
