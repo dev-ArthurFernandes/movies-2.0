@@ -1,6 +1,6 @@
 import { Router } from "express";
 import {
-    createNewMovieController
+    createNewMovieController, listAllMoviesController
 } from "../controllers";
 import { 
     ensureData,
@@ -13,6 +13,7 @@ const moviesRoutes = Router()
 
 moviesRoutes.post('', ensureData(createMoviesSchemas), validateName, createNewMovieController)
 
+moviesRoutes.get('', listAllMoviesController)
 
 
 export default moviesRoutes
