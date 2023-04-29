@@ -1,5 +1,5 @@
-import createNewMovieService from "./createNewMovie.services";
-import listAllMoviesService from "./listAllMovies.services";
+import createNewMovieService from "./createNewMovie.service";
+import listAllMoviesService from "./listAllMovies.service";
 
 export {
     createNewMovieService,
